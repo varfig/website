@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VARFIG — Software de operación para el mar, el puerto y la flota</title>
+<meta name="description" content="VARFIG construye software que aguanta la operación real de empresas marítimas, salmonicultoras y de logística del sur de Chile. No partimos de cero entendiendo tu operación.">
+<meta property="og:title" content="VARFIG — Software de operación">
+<meta property="og:description" content="Construimos software que aguanta la operación real — en el mar, el puerto y la flota.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:#ff5a1f;color:#0a1922}
+@keyframes flow{to{stroke-dashoffset:-44}}
+@keyframes pulse{0%{opacity:.55}70%{opacity:0}100%{opacity:0}}
+@keyframes scan{0%{transform:translateX(-30px);opacity:0}12%{opacity:.45}88%{opacity:.45}100%{transform:translateX(650px);opacity:0}}
+@keyframes blink{50%{opacity:.3}}
+.thesis-panel{transition:opacity .55s ease,transform .55s ease}
+/* ---- responsive ---- */
+@media (max-width:900px){
+  .r-hero{grid-template-columns:1fr !important;gap:36px !important;min-height:auto !important;padding-top:44px !important;padding-bottom:48px !important}
+  .r-narr{grid-template-columns:1fr !important}
+  .r-thesis{display:none !important}
+  .r-contact{grid-template-columns:1fr !important;gap:36px !important;padding:64px 24px !important}
+  .r-evidence{border-left:none !important}
+  .r-pad{padding:64px 24px !important}
+}
+@media (max-width:620px){
+  .r-pillars{grid-template-columns:1fr !important}
+  .r-nav-links a:not(.r-cta){display:none !important}
+  .r-hero,.r-narr-wrap{padding-left:22px !important;padding-right:22px !important}
+}
+</style>
+</head>
+<body>
+<div id="root" style="--navy:#0a1922;--navy2:#0f2937;--paper:#f3f1ea;--paper2:#eae7dd;--ink:#13242f;--graph:#5a6770;--line:#dcd7cb;--accent:#ff5a1f;--accent-ink:#c8410c;--ok:#2f9e63;--bad:#d23b2f;--mono:#7e8a92;font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper)">
+
+  <!-- ================= NAV ================= -->
+  <nav style="position:sticky;top:0;z-index:60;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.1)">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between">
+      <a href="#top" style="text-decoration:none;display:flex;align-items:baseline;gap:12px">
+        <span style="font-weight:700;font-size:20px;letter-spacing:-.01em;color:var(--paper)">VARFIG</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:rgba(243,241,234,.45)">SOFTWARE&nbsp;DE&nbsp;OPERACIÓN</span>
+      </a>
+      <div class="r-nav-links" style="display:flex;align-items:center;gap:28px">
+        <a href="#trabajo" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:rgba(243,241,234,.7);text-decoration:none">TRABAJO</a>
+        <a href="#metodo" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:rgba(243,241,234,.7);text-decoration:none">MÉTODO</a>
+        <a href="#dominio" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:rgba(243,241,234,.7);text-decoration:none">DOMINIO</a>
+        <a href="#contacto" class="r-cta" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--navy);background:var(--accent);text-decoration:none;padding:9px 16px;border-radius:2px;font-weight:600">CONVERSEMOS</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header id="top" style="background:var(--navy);color:var(--paper);border-bottom:1px solid rgba(255,255,255,.08)">
+    <div class="r-hero" style="max-width:1320px;margin:0 auto;padding:56px 40px 64px;display:grid;grid-template-columns:0.92fr 1.15fr;gap:52px;align-items:center;min-height:calc(100vh - 64px)">
+
+      <!-- hero left -->
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:26px">ALTA&nbsp;DISPONIBILIDAD&nbsp;·&nbsp;SUR&nbsp;DE&nbsp;CHILE</div>
+        <h1 style="font-size:clamp(34px,3.8vw,56px);line-height:1.04;letter-spacing:-.022em;font-weight:600;margin-bottom:24px">Construimos software que aguanta la <span style="color:var(--accent)">operación real</span> — en el mar, el puerto y la flota.</h1>
+        <p style="font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:rgba(243,241,234,.72);max-width:46ch;margin-bottom:34px">Para empresas marítimas, salmonicultoras y de logística del sur de Chile. No partimos de cero entendiendo tu operación.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px">
+          <a href="#contacto" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;font-weight:600;color:var(--navy);background:var(--accent);text-decoration:none;padding:14px 22px;border-radius:2px">Conversemos sobre tu operación</a>
+          <a href="#trabajo" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;color:var(--paper);background:transparent;border:1px solid rgba(255,255,255,.28);text-decoration:none;padding:14px 22px;border-radius:2px">Mira lo que hemos construido →</a>
+        </div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(243,241,234,.5);border-top:1px solid rgba(255,255,255,.1);padding-top:18px">
+          <span style="color:var(--ok)">● SISTEMAS OPERATIVOS</span>
+          <span>UTC <span class="clock">--:--:--</span></span>
+          <span>5 NAVES EN SEGUIMIENTO</span>
+        </div>
+      </div>
+
+      <!-- hero right: fleet map -->
+      <div style="position:relative;width:100%;aspect-ratio:620/470;background:#071219;border:1px solid rgba(255,255,255,.13);border-radius:3px;overflow:hidden;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)">
+        <svg viewBox="0 0 620 470" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;display:block">
+          <!-- landmass -->
+          <path d="M0,0 L150,0 C150,58 118,86 138,134 C158,182 108,222 128,280 C148,338 100,378 118,470 L0,470 Z" fill="#0e2330" stroke="rgba(120,180,210,.22)" stroke-width=".8"></path>
+          <path d="M338,150 C386,140 418,176 410,224 C402,272 356,296 318,272 C280,248 290,168 338,150 Z" fill="#0e2330" stroke="rgba(120,180,210,.22)" stroke-width=".8"></path>
+          <ellipse cx="540" cy="92" rx="40" ry="26" fill="#0e2330" stroke="rgba(120,180,210,.22)" stroke-width=".8" transform="rotate(-18 540 92)"></ellipse>
+          <ellipse cx="498" cy="392" rx="30" ry="20" fill="#0e2330" stroke="rgba(120,180,210,.22)" stroke-width=".8" transform="rotate(12 498 392)"></ellipse>
+
+          <!-- lat/lon grid -->
+          <g>
+            <line x1="0" y1="94" x2="620" y2="94" stroke="rgba(120,180,210,.08)"></line>
+            <line x1="0" y1="188" x2="620" y2="188" stroke="rgba(120,180,210,.08)"></line>
+            <line x1="0" y1="282" x2="620" y2="282" stroke="rgba(120,180,210,.08)"></line>
+            <line x1="0" y1="376" x2="620" y2="376" stroke="rgba(120,180,210,.08)"></line>
+            <line x1="155" y1="0" x2="155" y2="470" stroke="rgba(120,180,210,.08)"></line>
+            <line x1="310" y1="0" x2="310" y2="470" stroke="rgba(120,180,210,.08)"></line>
+            <line x1="465" y1="0" x2="465" y2="470" stroke="rgba(120,180,210,.08)"></line>
+            <text x="6" y="90" font-family="'IBM Plex Mono',monospace" font-size="8" fill="rgba(150,200,225,.4)">41°00'S</text>
+            <text x="6" y="184" font-family="'IBM Plex Mono',monospace" font-size="8" fill="rgba(150,200,225,.4)">42°00'S</text>
+            <text x="6" y="278" font-family="'IBM Plex Mono',monospace" font-size="8" fill="rgba(150,200,225,.4)">43°00'S</text>
+            <text x="316" y="462" font-family="'IBM Plex Mono',monospace" font-size="8" fill="rgba(150,200,225,.4)">073°W</text>
+            <text x="471" y="462" font-family="'IBM Plex Mono',monospace" font-size="8" fill="rgba(150,200,225,.4)">072°W</text>
+          </g>
+
+          <!-- tracks -->
+          <path id="t1" d="M150,120 C220,150 230,210 300,230 C370,250 410,300 470,300" fill="none" stroke="rgba(120,180,210,.32)" stroke-width="1.3" stroke-dasharray="2 6" stroke-linecap="round"></path>
+          <path id="t2" d="M130,330 C200,300 250,330 320,290 C390,250 440,210 520,200" fill="none" stroke="rgba(120,180,210,.3)" stroke-width="1.3" stroke-dasharray="2 6" stroke-linecap="round"></path>
+          <path id="t3" d="M300,230 C340,260 360,320 340,360" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="6 8" stroke-linecap="round" style="animation:flow 2.6s linear infinite;opacity:.85"></path>
+
+          <!-- moving dots -->
+          <g>
+            <circle r="3" fill="rgba(150,205,235,.9)">
+              <animateMotion dur="20s" repeatCount="indefinite" rotate="auto"><mpath href="#t1"></mpath></animateMotion>
+            </circle>
+            <circle r="3" fill="rgba(150,205,235,.9)">
+              <animateMotion dur="26s" repeatCount="indefinite" rotate="auto"><mpath href="#t2"></mpath></animateMotion>
+            </circle>
+            <rect x="0" y="0" width="2" height="470" fill="var(--accent)" opacity="0" style="animation:scan 7s linear infinite"></rect>
+          </g>
+
+          <!-- vessels -->
+          <g transform="translate(300,230)">
+            <circle r="13" fill="none" stroke="var(--accent)" stroke-width="1" style="animation:pulse 2.8s ease-out infinite;transform-box:fill-box;transform-origin:center"></circle>
+            <rect x="-4.5" y="-4.5" width="9" height="9" fill="var(--accent)" transform="rotate(45)"></rect>
+            <text x="11" y="-1" font-family="'IBM Plex Mono',monospace" font-size="9.5" font-weight="600" fill="#ffd9c7">CB-4521</text>
+            <text x="11" y="9" font-family="'IBM Plex Mono',monospace" font-size="8" fill="rgba(255,217,199,.7)">WELLBOAT AUSTRAL</text>
+          </g>
+          <g transform="translate(470,300)">
+            <rect x="-3.5" y="-3.5" width="7" height="7" fill="rgba(150,205,235,.95)" transform="rotate(45)"></rect>
+            <text x="9" y="-1" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="rgba(200,225,240,.85)">LW-2987</text>
+            <text x="9" y="8" font-family="'IBM Plex Mono',monospace" font-size="7.5" fill="rgba(200,225,240,.55)">NAVE INVERMAR</text>
+          </g>
+          <g transform="translate(130,330)">
+            <rect x="-3.5" y="-3.5" width="7" height="7" fill="rgba(150,205,235,.95)" transform="rotate(45)"></rect>
+            <text x="9" y="-1" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="rgba(200,225,240,.85)">PMC-118</text>
+            <text x="9" y="8" font-family="'IBM Plex Mono',monospace" font-size="7.5" fill="rgba(200,225,240,.55)">BARCAZA CPT</text>
+          </g>
+          <g transform="translate(520,200)">
+            <rect x="-3.5" y="-3.5" width="7" height="7" fill="rgba(150,205,235,.95)" transform="rotate(45)"></rect>
+            <text x="-58" y="-1" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="rgba(200,225,240,.85)">XQ-7741</text>
+            <text x="-70" y="8" font-family="'IBM Plex Mono',monospace" font-size="7.5" fill="rgba(200,225,240,.55)">PATRULLERA</text>
+          </g>
+          <g transform="translate(340,360)">
+            <rect x="-3.5" y="-3.5" width="7" height="7" fill="rgba(150,205,235,.95)" transform="rotate(45)"></rect>
+            <text x="9" y="-1" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="rgba(200,225,240,.85)">FF-0925</text>
+            <text x="9" y="8" font-family="'IBM Plex Mono',monospace" font-size="7.5" fill="rgba(200,225,240,.55)">LANCHA FISHFLOW</text>
+          </g>
+        </svg>
+
+        <!-- HUD: top-left -->
+        <div style="position:absolute;top:12px;left:12px;background:rgba(7,18,25,.72);border:1px solid rgba(255,255,255,.12);border-radius:2px;padding:8px 11px;backdrop-filter:blur(3px)">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:rgba(243,241,234,.55)">SEGUIMIENTO DE FLOTA</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent)">UTC <span class="clock">--:--:--</span></div>
+        </div>
+
+        <!-- HUD: selected vessel -->
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(7,18,25,.74);border:1px solid rgba(255,255,255,.12);border-radius:2px;padding:10px 12px;backdrop-filter:blur(3px);max-width:248px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--accent);margin-bottom:6px">● SELECCIONADA</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--paper);font-weight:600;margin-bottom:4px">CB-4521 · WELLBOAT AUSTRAL</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.7;color:rgba(243,241,234,.6)">41°28.6'S&nbsp;&nbsp;073°02.1'W<br>RUMBO 214°&nbsp;·&nbsp;11.4 kn<br>FAENA: TRASLADO SMOLT</div>
+        </div>
+
+        <!-- HUD: port status -->
+        <div style="position:absolute;top:12px;right:12px;background:rgba(7,18,25,.74);border:1px solid rgba(255,255,255,.12);border-radius:2px;padding:9px 11px;backdrop-filter:blur(3px);min-width:172px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:rgba(243,241,234,.55);margin-bottom:7px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;white-space:nowrap"><span>SIT.&nbsp;PORTUARIA</span><span style="color:rgba(243,241,234,.35)">SITPORT</span></div>
+          <div id="ports"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= NARRATIVE: sticky thesis + scrolling evidence ================= -->
+  <div style="background:var(--paper)">
+    <div class="r-narr r-narr-wrap" style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:40% 60%">
+
+      <!-- LEFT: sticky thesis -->
+      <div class="r-thesis">
+        <div style="position:sticky;top:64px;height:calc(100vh - 64px);padding:0 48px 0 40px;display:flex;align-items:center">
+          <div style="position:relative;width:100%">
+
+            <div class="thesis-panel" data-panel="0" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:1;transform:translateY(0px);pointer-events:none">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:var(--accent);margin-bottom:18px">01&nbsp;/&nbsp;06&nbsp;&nbsp;EL&nbsp;PROBLEMA</div>
+              <div style="font-size:clamp(26px,2.5vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--ink)">«Software a medida» lo prometen todos. Casi ninguno lo cumple.</div>
+              <div style="width:40px;height:2px;background:var(--accent);margin:22px 0"></div>
+              <div style="font-size:15px;line-height:1.55;color:var(--graph);max-width:34ch">Empezar de cero no es a medida. Es empezar tarde.</div>
+            </div>
+
+            <div class="thesis-panel" data-panel="1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:var(--accent);margin-bottom:18px">02&nbsp;/&nbsp;06&nbsp;&nbsp;LO&nbsp;QUE&nbsp;CONSTRUIMOS</div>
+              <div style="font-size:clamp(26px,2.5vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--ink)">Componentes en producción. No diapositivas.</div>
+              <div style="width:40px;height:2px;background:var(--accent);margin:22px 0"></div>
+              <div style="font-size:15px;line-height:1.55;color:var(--graph);max-width:34ch">Lo que ves a la derecha ya corre para clientes reales.</div>
+            </div>
+
+            <div class="thesis-panel" data-panel="2" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:var(--accent);margin-bottom:18px">03&nbsp;/&nbsp;06&nbsp;&nbsp;CÓMO&nbsp;NOS&nbsp;DIFERENCIAMOS</div>
+              <div style="font-size:clamp(26px,2.5vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--ink)">Cuatro razones. Sin adjetivos.</div>
+              <div style="width:40px;height:2px;background:var(--accent);margin:22px 0"></div>
+              <div style="font-size:15px;line-height:1.55;color:var(--graph);max-width:34ch">Dominio real, componentes propios, software que dura, seguridad de origen.</div>
+            </div>
+
+            <div class="thesis-panel" data-panel="3" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:var(--accent);margin-bottom:18px">04&nbsp;/&nbsp;06&nbsp;&nbsp;DOMINIO</div>
+              <div style="font-size:clamp(26px,2.5vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--ink)">Hablamos tu idioma operativo.</div>
+              <div style="width:40px;height:2px;background:var(--accent);margin:22px 0"></div>
+              <div style="font-size:15px;line-height:1.55;color:var(--graph);max-width:34ch">Faena, nave, situación portuaria, Sernapesca, SITPORT. No traducimos: entendemos.</div>
+            </div>
+
+            <div class="thesis-panel" data-panel="4" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:var(--accent);margin-bottom:18px">05&nbsp;/&nbsp;06&nbsp;&nbsp;CÓMO&nbsp;TRABAJAMOS</div>
+              <div style="font-size:clamp(26px,2.5vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--ink)">Nuestro método, en orden.</div>
+              <div style="width:40px;height:2px;background:var(--accent);margin:22px 0"></div>
+              <div style="font-size:15px;line-height:1.55;color:var(--graph);max-width:34ch">Eliminar primero. Automatizar al final.</div>
+            </div>
+
+            <div class="thesis-panel" data-panel="5" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:var(--accent);margin-bottom:18px">06&nbsp;/&nbsp;06&nbsp;&nbsp;QUIÉNES&nbsp;SOMOS</div>
+              <div style="font-size:clamp(26px,2.5vw,38px);line-height:1.12;letter-spacing:-.02em;font-weight:600;color:var(--ink)">Construimos para la operación, no para la presentación.</div>
+              <div style="width:40px;height:2px;background:var(--accent);margin:22px 0"></div>
+              <div style="font-size:15px;line-height:1.55;color:var(--graph);max-width:34ch">Empresa chilena de software. Sur de Chile.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: scrolling evidence -->
+      <div class="r-evidence" style="border-left:1px solid var(--line)">
+
+        <!-- 01 EL PROBLEMA -->
+        <section data-thesis="0" class="r-pad" style="min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding:90px 40px 90px 64px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:34px">EL&nbsp;PROBLEMA</div>
+          <p style="font-size:clamp(20px,1.8vw,26px);line-height:1.45;font-weight:500;letter-spacing:-.01em;color:var(--ink);max-width:30ch;margin-bottom:30px">«Software a medida» casi siempre significa empezar de cero, plazos que se estiran y un sistema que nadie puede mantener seis meses después.</p>
+          <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);margin-bottom:40px">
+            <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;color:var(--accent);font-size:15px">×</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--graph)">EMPEZAR DE CERO CADA VEZ</span></div>
+            <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;color:var(--accent);font-size:15px">×</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--graph)">PLAZOS QUE SE ESTIRAN</span></div>
+            <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;color:var(--accent);font-size:15px">×</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--graph)">NADIE LO PUEDE MANTENER</span></div>
+          </div>
+          <p style="font-size:17px;line-height:1.55;color:var(--ink);max-width:44ch"><strong style="font-weight:600">Tu operación no espera.</strong> La nave zarpa, la faena parte, la situación portuaria cambia. El software tiene que estar arriba cuando eso pasa — no en la próxima release.</p>
+        </section>
+
+        <!-- 02 LO QUE CONSTRUIMOS -->
+        <section id="trabajo" data-thesis="1" class="r-pad" style="min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding:90px 40px 90px 64px;border-top:1px solid var(--line);scroll-margin-top:80px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:18px">LO&nbsp;QUE&nbsp;CONSTRUIMOS&nbsp;·&nbsp;EN&nbsp;PRODUCCIÓN</div>
+          <p style="font-size:clamp(18px,1.5vw,22px);line-height:1.45;font-weight:500;color:var(--ink);max-width:38ch;margin-bottom:34px">Componentes propios ya corriendo para clientes reales. No diapositivas.</p>
+
+          <div style="border-top:1px solid var(--ink)">
+            <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">01</span>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Flota en mapa en tiempo real</div><div style="font-size:14px;color:var(--graph)">Posición y estado de cada nave, en un solo lugar.</div></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">AIS · GPS</span>
+            </div>
+            <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">02</span>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Seguimiento multi-proveedor de GPS</div><div style="font-size:14px;color:var(--graph)">Un solo mapa, varios proveedores de posición.</div></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">MULTI-GPS</span>
+            </div>
+            <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">03</span>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Tracks náuticos</div><div style="font-size:14px;color:var(--graph)">Reconstrucción de rutas y faenas, paso a paso.</div></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">GEOJSON</span>
+            </div>
+            <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">04</span>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Clima marítimo</div><div style="font-size:14px;color:var(--graph)">Viento, oleaje y pronóstico por zona de operación.</div></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">METEO</span>
+            </div>
+            <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">05</span>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Situación portuaria</div><div style="font-size:14px;color:var(--graph)">Restricciones y estado de puertos en tiempo real.</div></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">SITPORT</span>
+            </div>
+          </div>
+
+          <div style="margin-top:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--graph)">CONSTRUIDO&nbsp;PARA</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--ink)">FishFlow&nbsp;·&nbsp;CPT&nbsp;·&nbsp;Invermar&nbsp;·&nbsp;Lapsa</span>
+          </div>
+        </section>
+
+        <!-- 03 PILARES -->
+        <section data-thesis="2" class="r-pad" style="min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding:90px 40px 90px 64px;border-top:1px solid var(--line)">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:34px">CÓMO&nbsp;NOS&nbsp;DIFERENCIAMOS</div>
+          <div class="r-pillars" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)">
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A1</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Dominio real, no genérico</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Hablamos tu idioma operativo: faenas, naves, indicativos de llamada, situación portuaria.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A2</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">No reinventamos la rueda</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Componentes propios ya en producción que aceleran la entrega sin sacrificar el ajuste a medida.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A3</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Software que dura</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Stack moderno y robusto corriendo hoy para clientes reales, no demos. Mantenible y auditable.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A4</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Ciberseguridad desde el diseño</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">No es un parche al final; está en la arquitectura desde el primer commit.</div></div>
+          </div>
+        </section>
+
+        <!-- 04 DOMINIO -->
+        <section id="dominio" data-thesis="3" class="r-pad" style="min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding:90px 40px 90px 64px;border-top:1px solid var(--line);scroll-margin-top:80px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:18px">DOMINIO&nbsp;·&nbsp;GLOSARIO&nbsp;OPERATIVO</div>
+          <p style="font-size:clamp(18px,1.5vw,22px);line-height:1.45;font-weight:500;color:var(--ink);max-width:38ch;margin-bottom:32px">Esto no lo aprendimos para vender. Es el vocabulario con el que ya trabajamos.</p>
+          <div style="border-top:1px solid var(--ink)">
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">FAENA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Operación marítima o portuaria concreta: zarpe, traslado, carga, faena extractiva.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">NAVE</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Término legal para embarcación (Ley de Navegación, DL 2.222). Mayor o menor según tonelaje.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SITUACIÓN&nbsp;PORTUARIA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Estado operativo de los puertos en tiempo real. También el sistema oficial de DIRECTEMAR.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SERNAPESCA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Servicio que fiscaliza pesca y acuicultura, y certifica las exportaciones.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SITPORT&nbsp;/&nbsp;DIRECTEMAR</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">La Autoridad Marítima de la Armada y su sistema nacional de situación portuaria.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">INDICATIVO&nbsp;DE&nbsp;LLAMADA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Distintivo de radio de una nave; la identifica junto al nombre y el MMSI.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SEGUIMIENTO&nbsp;DE&nbsp;FLOTA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Posición de la flota vía AIS / posicionamiento satelital.</span></div>
+          </div>
+        </section>
+
+        <!-- 05 METODO -->
+        <section id="metodo" data-thesis="4" class="r-pad" style="min-height:94vh;display:flex;flex-direction:column;justify-content:center;padding:90px 40px 90px 64px;border-top:1px solid var(--line);scroll-margin-top:80px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:18px">CÓMO&nbsp;TRABAJAMOS&nbsp;·&nbsp;NUESTRO&nbsp;MÉTODO,&nbsp;EN&nbsp;ORDEN</div>
+          <div style="border-top:1px solid var(--ink);margin-bottom:30px">
+            <div style="display:grid;grid-template-columns:46px 180px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">01</span><span style="font-size:20px;font-weight:600;color:var(--ink)">Eliminar</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Cuestionamos cada requisito antes de construirlo. El mejor código es el que no se escribe.</span></div>
+            <div style="display:grid;grid-template-columns:46px 180px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">02</span><span style="font-size:20px;font-weight:600;color:var(--ink)">Simplificar</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Lo que sobrevive, lo reducimos a su forma más simple que aún resuelve el problema.</span></div>
+            <div style="display:grid;grid-template-columns:46px 180px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">03</span><span style="font-size:20px;font-weight:600;color:var(--ink)">Optimizar</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Recién aquí ajustamos rendimiento y costo. Optimizar antes es pulir lo que sobra.</span></div>
+            <div style="display:grid;grid-template-columns:46px 180px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">04</span><span style="font-size:20px;font-weight:600;color:var(--ink)">Acelerar</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Subimos la cadencia de entrega cuando el sistema ya es simple y estable.</span></div>
+            <div style="display:grid;grid-template-columns:46px 180px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)">05</span><span style="font-size:20px;font-weight:600;color:var(--ink)">Automatizar</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Al final, no al principio. Solo se automatiza lo que ya probó que debe existir.</span></div>
+          </div>
+          <div style="border-left:2px solid var(--accent);padding:6px 0 6px 20px;max-width:52ch"><p style="font-size:16px;line-height:1.55;color:var(--ink)">Automatizar algo que no debió existir es trabajo perdido. Por eso ese paso va último.</p></div>
+        </section>
+
+        <!-- 06 QUIENES SOMOS -->
+        <section data-thesis="5" class="r-pad" style="min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:90px 40px 90px 64px;border-top:1px solid var(--line)">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:30px">QUIÉNES&nbsp;SOMOS</div>
+          <p style="font-size:clamp(20px,1.8vw,27px);line-height:1.4;font-weight:500;letter-spacing:-.01em;color:var(--ink);max-width:34ch;margin-bottom:26px">Somos VARFIG, una empresa chilena de software. Construimos para la operación, no para la presentación.</p>
+          <p style="font-size:16px;line-height:1.55;color:var(--graph);max-width:46ch;margin-bottom:30px">Trabajamos con empresas marítimas, salmonicultoras y de logística del sur de Chile. Sabemos qué es una faena, por qué importa la situación portuaria y qué fiscaliza Sernapesca — porque ya construimos para eso.</p>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--graph);border-top:1px solid var(--line);padding-top:18px">PUERTO MONTT · CHILE&nbsp;&nbsp;·&nbsp;&nbsp;41°28'S 072°56'W</div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" style="background:var(--navy);color:var(--paper);border-top:1px solid rgba(255,255,255,.08);scroll-margin-top:64px">
+    <div class="r-contact" style="max-width:1320px;margin:0 auto;padding:96px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:24px">CONTACTO</div>
+        <h2 style="font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-.022em;font-weight:600;margin-bottom:22px">Conversemos sobre tu operación.</h2>
+        <p style="font-size:18px;line-height:1.5;color:rgba(243,241,234,.72);max-width:42ch">Cuéntanos qué problema quieres resolver. Te respondemos con una persona, no con un formulario automático.</p>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.14);border-radius:3px;padding:30px 30px;background:rgba(255,255,255,.02)">
+        <div style="display:flex;flex-direction:column;gap:0">
+          <a href="mailto:contacto@varfig.cl" style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);text-decoration:none"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(243,241,234,.5)">EMAIL</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--paper)">contacto@varfig.cl</span></a>
+          <a href="https://wa.me/56951855232" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);text-decoration:none"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(243,241,234,.5)">WHATSAPP</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--paper)">+56 9 5185 5232</span></a>
+          <a href="https://www.linkedin.com/company/varfig-software" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);text-decoration:none"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(243,241,234,.5)">LINKEDIN</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--paper)">/varfig-software</span></a>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(243,241,234,.5)">UBICACIÓN</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--paper)">Puerto Montt, Chile</span></div>
+        </div>
+        <a href="mailto:contacto@varfig.cl" style="display:block;text-align:center;margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;font-weight:600;color:var(--navy);background:var(--accent);text-decoration:none;padding:15px;border-radius:2px">Conversemos →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer style="background:var(--navy);color:rgba(243,241,234,.5);border-top:1px solid rgba(255,255,255,.08)">
+    <div style="max-width:1320px;margin:0 auto;padding:30px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <div style="display:flex;align-items:baseline;gap:12px"><span style="font-weight:700;font-size:16px;color:var(--paper)">VARFIG</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em">SOFTWARE DE OPERACIÓN</span></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em">© 2026 · SUR DE CHILE · SIN HUMO</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var clocks = document.querySelectorAll('.clock');
+  function tick() {
+    var d = new Date();
+    var t = pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds());
+    clocks.forEach(function (c) { c.textContent = t; });
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  var portsEl = document.getElementById('ports');
+  var ports = [
+    { name: 'PUERTO MONTT', st: 'ABIERTO' },
+    { name: 'CALBUCO', st: 'ABIERTO' },
+    { name: 'QUELLÓN', st: 'RESTRINGIDO' },
+    { name: 'CHACABUCO', st: 'CERRADO' },
+    { name: 'CASTRO', st: 'ABIERTO' }
+  ];
+  function dotColor(st) {
+    if (st === 'ABIERTO') return '#2f9e63';
+    if (st === 'RESTRINGIDO') return '#ff5a1f';
+    return '#d23b2f';
+  }
+  function renderPorts() {
+    portsEl.innerHTML = ports.map(function (p) {
+      return '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2.5px 0">'
+        + '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:rgba(243,241,234,.78)">' + p.name + '</span>'
+        + '<span style="display:flex;align-items:center;gap:5px">'
+        + '<span style="width:6px;height:6px;border-radius:50%;background:' + dotColor(p.st) + ';animation:blink 2.4s ease-in-out infinite"></span>'
+        + '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:8.5px;color:rgba(243,241,234,.5);width:62px;text-align:right">' + p.st + '</span>'
+        + '</span></div>';
+    }).join('');
+  }
+  renderPorts();
+  var states = ['ABIERTO', 'ABIERTO', 'RESTRINGIDO', 'CERRADO'];
+  setInterval(function () {
+    var i = Math.floor(Math.random() * ports.length);
+    ports[i].st = states[Math.floor(Math.random() * states.length)];
+    renderPorts();
+  }, 3400);
+
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.thesis-panel'));
+  function setActive(a) {
+    panels.forEach(function (p, i) {
+      p.style.opacity = i === a ? '1' : '0';
+      p.style.transform = i === a ? 'translateY(0px)' : ('translateY(' + (i < a ? '-16px' : '16px') + ')');
+    });
+  }
+  setActive(0);
+  var secs = document.querySelectorAll('[data-thesis]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) setActive(+e.target.getAttribute('data-thesis'));
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
