@@ -292,7 +292,7 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
             <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A1</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Dominio real, no genérico</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Hablamos tu idioma operativo: esmoltificación, biomasa, FCR, situación portuaria.</div></div>
             <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A2</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">No reinventamos la rueda</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Componentes propios ya en producción: software funcional en 2 semanas, no en 6 meses.</div></div>
             <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A3</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Software que dura</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">En línea desde 2022, con 99,9% de disponibilidad. Sigue corriendo todos los días — sin reescribir desde cero.</div></div>
-            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A4</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Ciberseguridad desde el diseño</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Diseñamos bajo OWASP ASVS, alineados con la Ley Marco de Ciberseguridad (21.663) y la ANCI. No es un parche al final; está en la arquitectura desde el primer día.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A4</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Ciberseguridad desde el diseño</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Security by Design desde el primer día, no un parche al final. Seguimos los Controles CIS —nivel base siempre, escalando según la infraestructura— con cifrado en reposo y por campos para proteger los datos sensibles. Alineados con la Ley Marco de Ciberseguridad (21.663) y la ANCI.</div></div>
           </div>
         </section>
 
@@ -435,13 +435,22 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
   var RATE = NAVES_ACT / (15 * 60);    // ≈ 1,18 posiciones/seg
   var contadorEl = document.querySelector('#contador-posiciones');
   if (contadorEl) {
-    var tickContador = function () {
-      var dt = (Date.now() - BASE_TS) / 1000;
-      var val = Math.floor(BASE + dt * RATE);
-      contadorEl.textContent = val.toLocaleString('es-CL');
+    var proyectado = function () {
+      return Math.floor(BASE + (Date.now() - BASE_TS) / 1000 * RATE);
     };
-    tickContador();
-    setInterval(tickContador, 850);
+    var mostrado = proyectado();
+    var render = function () {
+      contadorEl.textContent = mostrado.toLocaleString('es-CL');
+    };
+    render();
+    // sube de a 1 hacia la proyección real (~1,18 pos/seg);
+    // si la pestaña estuvo en background, se pone al día de golpe
+    setInterval(function () {
+      var gap = proyectado() - mostrado;
+      if (gap <= 0) return;
+      mostrado += gap > 8 ? gap : 1;
+      render();
+    }, 700);
   }
 })();
 </script>
