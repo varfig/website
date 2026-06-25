@@ -22,6 +22,7 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
 @keyframes scan{0%{transform:translateX(-30px);opacity:0}12%{opacity:.45}88%{opacity:.45}100%{transform:translateX(650px);opacity:0}}
 @keyframes blink{50%{opacity:.3}}
 .thesis-panel{transition:opacity .55s ease,transform .55s ease}
+.contador{font-variant-numeric:tabular-nums;font-feature-settings:"tnum";letter-spacing:.02em}
 /* ---- responsive ---- */
 @media (max-width:900px){
   .r-hero{grid-template-columns:1fr !important;gap:36px !important;min-height:auto !important;padding-top:44px !important;padding-bottom:48px !important}
@@ -63,9 +64,9 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
 
       <!-- hero left -->
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:26px">ALTA&nbsp;DISPONIBILIDAD&nbsp;·&nbsp;SUR&nbsp;DE&nbsp;CHILE</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:26px">99,9%&nbsp;DE&nbsp;DISPONIBILIDAD&nbsp;·&nbsp;SUR&nbsp;DE&nbsp;CHILE</div>
         <h1 style="font-size:clamp(34px,3.8vw,56px);line-height:1.04;letter-spacing:-.022em;font-weight:600;margin-bottom:24px">Construimos software que aguanta la <span style="color:var(--accent)">operación real</span> — en el mar, el puerto y la flota.</h1>
-        <p style="font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:rgba(243,241,234,.72);max-width:46ch;margin-bottom:34px">Para empresas marítimas, salmonicultoras y de logística del sur de Chile. No partimos de cero entendiendo tu operación.</p>
+        <p style="font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:rgba(243,241,234,.72);max-width:46ch;margin-bottom:34px">Para empresas marítimas, salmonicultoras y de logística del sur de Chile. Hoy seguimos 1.560 naves en tiempo real. No partimos de cero entendiendo tu operación.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px">
           <a href="#contacto" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;font-weight:600;color:var(--navy);background:var(--accent);text-decoration:none;padding:14px 22px;border-radius:2px">Conversemos sobre tu operación</a>
           <a href="#trabajo" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;color:var(--paper);background:transparent;border:1px solid rgba(255,255,255,.28);text-decoration:none;padding:14px 22px;border-radius:2px">Mira lo que hemos construido →</a>
@@ -73,7 +74,7 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
         <div style="display:flex;gap:18px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(243,241,234,.5);border-top:1px solid rgba(255,255,255,.1);padding-top:18px">
           <span style="color:var(--ok)">● SISTEMAS OPERATIVOS</span>
           <span>UTC <span class="clock">--:--:--</span></span>
-          <span>5 NAVES EN SEGUIMIENTO</span>
+          <span>1.560 NAVES EN SEGUIMIENTO</span>
         </div>
       </div>
 
@@ -165,6 +166,12 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
           <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:rgba(243,241,234,.55);margin-bottom:7px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;white-space:nowrap"><span>SIT.&nbsp;PORTUARIA</span><span style="color:rgba(243,241,234,.35)">SITPORT</span></div>
           <div id="ports"></div>
         </div>
+
+        <!-- HUD: posiciones registradas -->
+        <div style="position:absolute;bottom:12px;right:12px;background:rgba(7,18,25,.74);border:1px solid rgba(255,255,255,.12);border-radius:2px;padding:9px 11px;backdrop-filter:blur(3px);text-align:right">
+          <div id="contador-posiciones" class="contador" aria-live="off" style="font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600;color:var(--accent)">44.232.698</div>
+          <div class="contador-label" style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.12em;color:rgba(243,241,234,.55);margin-top:3px">POSICIONES&nbsp;REGISTRADAS</div>
+        </div>
       </div>
     </div>
   </header>
@@ -247,27 +254,27 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
           <div style="border-top:1px solid var(--ink)">
             <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
               <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">01</span>
-              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Flota en mapa en tiempo real</div><div style="font-size:14px;color:var(--graph)">Posición y estado de cada nave, en un solo lugar.</div></div>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Flota en mapa en tiempo real</div><div style="font-size:14px;color:var(--graph)">Posición de cada nave, actualizada cada 15 minutos.</div></div>
               <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">AIS · GPS</span>
             </div>
             <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
               <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">02</span>
-              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Seguimiento multi-proveedor de GPS</div><div style="font-size:14px;color:var(--graph)">Un solo mapa, varios proveedores de posición.</div></div>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Seguimiento multi-proveedor de GPS</div><div style="font-size:14px;color:var(--graph)">Leemos los 3 proveedores más usados del mercado — Marimsys, Tecsat y Cunlogan, todos autorizados por la Armada. Tu flota, con el GPS que ya tiene.</div></div>
               <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">MULTI-GPS</span>
             </div>
             <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
               <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">03</span>
-              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Tracks náuticos</div><div style="font-size:14px;color:var(--graph)">Reconstrucción de rutas y faenas, paso a paso.</div></div>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Tracks náuticos</div><div style="font-size:14px;color:var(--graph)">Reconstruimos cada ruta y cada faena desde el rastro real de la nave, paso a paso.</div></div>
               <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">GEOJSON</span>
             </div>
             <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
               <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">04</span>
-              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Clima marítimo</div><div style="font-size:14px;color:var(--graph)">Viento, oleaje y pronóstico por zona de operación.</div></div>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">14 modelos meteorológicos, incluido el europeo ECMWF.</div><div style="font-size:14px;color:var(--graph)">El mismo modelo que Windy usa como referencia, el más preciso del mundo. Viento, oleaje y pronóstico de hasta 16 días por zona de operación.</div></div>
               <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">METEO</span>
             </div>
             <div style="display:grid;grid-template-columns:32px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
               <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent)">05</span>
-              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Situación portuaria</div><div style="font-size:14px;color:var(--graph)">Restricciones y estado de puertos en tiempo real.</div></div>
+              <div><div style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px">Situación portuaria</div><div style="font-size:14px;color:var(--graph)">Restricciones y estado de puertos en tiempo real, con historial continuo desde 2020.</div></div>
               <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--graph);border:1px solid var(--line);padding:4px 8px;border-radius:2px;white-space:nowrap">SITPORT</span>
             </div>
           </div>
@@ -283,9 +290,9 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:34px">CÓMO&nbsp;NOS&nbsp;DIFERENCIAMOS</div>
           <div class="r-pillars" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)">
             <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A1</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Dominio real, no genérico</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Hablamos tu idioma operativo: faenas, naves, indicativos de llamada, situación portuaria.</div></div>
-            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A2</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">No reinventamos la rueda</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Componentes propios ya en producción que aceleran la entrega sin sacrificar el ajuste a medida.</div></div>
-            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A3</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Software que dura</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Stack moderno y robusto corriendo hoy para clientes reales, no demos. Mantenible y auditable.</div></div>
-            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A4</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Ciberseguridad desde el diseño</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">No es un parche al final; está en la arquitectura desde el primer commit.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A2</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">No reinventamos la rueda</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Componentes propios ya en producción: software funcional en 2 semanas, no en 6 meses.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A3</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Software que dura</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">En línea desde 2022, con 99,9% de disponibilidad. Sigue corriendo todos los días — sin reescribir desde cero.</div></div>
+            <div style="background:var(--paper);padding:28px 26px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:14px">A4</div><div style="font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px">Ciberseguridad desde el diseño</div><div style="font-size:14.5px;line-height:1.5;color:var(--graph)">Diseñamos bajo ISO/IEC 27001, OWASP ASVS y NIST CSF 2.0, alineados con la Ley Marco de Ciberseguridad (21.663) y la ANCI. No es un parche al final; está en la arquitectura desde el primer día.</div></div>
           </div>
         </section>
 
@@ -296,7 +303,7 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
           <div style="border-top:1px solid var(--ink)">
             <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">FAENA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Operación marítima o portuaria concreta: zarpe, traslado, carga, faena extractiva.</span></div>
             <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">NAVE</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Término legal para embarcación (Ley de Navegación, DL 2.222). Mayor o menor según tonelaje.</span></div>
-            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SITUACIÓN&nbsp;PORTUARIA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Estado operativo de los puertos en tiempo real. También el sistema oficial de DIRECTEMAR.</span></div>
+            <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SITUACIÓN&nbsp;PORTUARIA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Estado operativo de los puertos: restricciones, cierres y aperturas. Lo registramos de forma continua desde 2020.</span></div>
             <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SERNAPESCA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Servicio que fiscaliza pesca y acuicultura, y certifica las exportaciones.</span></div>
             <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">SITPORT&nbsp;/&nbsp;DIRECTEMAR</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">La Autoridad Marítima de la Armada y su sistema nacional de situación portuaria.</span></div>
             <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--ink)">INDICATIVO&nbsp;DE&nbsp;LLAMADA</span><span style="font-size:14.5px;line-height:1.5;color:var(--graph)">Distintivo de radio de una nave; la identifica junto al nombre y el MMSI.</span></div>
@@ -322,6 +329,7 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--graph);margin-bottom:30px">QUIÉNES&nbsp;SOMOS</div>
           <p style="font-size:clamp(20px,1.8vw,27px);line-height:1.4;font-weight:500;letter-spacing:-.01em;color:var(--ink);max-width:34ch;margin-bottom:26px">Somos VARFIG, una empresa chilena de software. Construimos para la operación, no para la presentación.</p>
           <p style="font-size:16px;line-height:1.55;color:var(--graph);max-width:46ch;margin-bottom:30px">Trabajamos con empresas marítimas, salmonicultoras y de logística del sur de Chile. Sabemos qué es una faena, por qué importa la situación portuaria y qué fiscaliza Sernapesca — porque ya construimos para eso.</p>
+          <p style="font-size:16px;line-height:1.55;color:var(--graph);max-width:46ch;margin-bottom:30px">Más de 30 años de experiencia combinada en software de alta exigencia para industrias complejas.</p>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--graph);border-top:1px solid var(--line);padding-top:18px">PUERTO MONTT · CHILE&nbsp;&nbsp;·&nbsp;&nbsp;41°28'S 072°56'W</div>
         </section>
 
@@ -335,7 +343,7 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
       <div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:24px">CONTACTO</div>
         <h2 style="font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-.022em;font-weight:600;margin-bottom:22px">Conversemos sobre tu operación.</h2>
-        <p style="font-size:18px;line-height:1.5;color:rgba(243,241,234,.72);max-width:42ch">Cuéntanos qué problema quieres resolver. Te respondemos con una persona, no con un formulario automático.</p>
+        <p style="font-size:18px;line-height:1.5;color:rgba(243,241,234,.72);max-width:42ch">Cuéntanos qué problema quieres resolver. Te respondemos en menos de 24 horas, con una persona — no con un formulario automático.</p>
       </div>
       <div style="border:1px solid rgba(255,255,255,.14);border-radius:3px;padding:30px 30px;background:rgba(255,255,255,.02)">
         <div style="display:flex;flex-direction:column;gap:0">
@@ -418,6 +426,21 @@ body{margin:0;background:#0a1922;-webkit-font-smoothing:antialiased;text-renderi
       });
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
     secs.forEach(function (s) { io.observe(s); });
+  }
+
+  var BASE = 44232698;                 // posiciones al 19-jun-2026 (dato real)
+  var BASE_TS = Date.UTC(2026, 5, 19); // 19 jun 2026, 00:00 UTC
+  var NAVES_ACT = 1066;                // naves activas que reportan cada 15 min
+  var RATE = NAVES_ACT / (15 * 60);    // ≈ 1,18 posiciones/seg
+  var contadorEl = document.querySelector('#contador-posiciones');
+  if (contadorEl) {
+    var tickContador = function () {
+      var dt = (Date.now() - BASE_TS) / 1000;
+      var val = Math.floor(BASE + dt * RATE);
+      contadorEl.textContent = val.toLocaleString('es-CL');
+    };
+    tickContador();
+    setInterval(tickContador, 850);
   }
 })();
 </script>
